@@ -15,18 +15,21 @@
         android:src="@drawable/user"
         />
     <EditText
+        android:id="@+id/edt_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Usuario"
         android:inputType="text"
         />
     <EditText
+        android:id="@+id/edt_contrasenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
         android:inputType="numberPassword"
         />
     <Button
+        android:id="@+id/bt_ingresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ingresar"
