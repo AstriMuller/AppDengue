@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App Dengue</string>
+    <string name="app_name">AppDengue</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
