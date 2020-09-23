@@ -12,7 +12,7 @@
         android:layout_width="400dp"
         android:layout_height="230dp"
         android:layout_gravity="center"
-        android:src="@drawable/usr" />
+        android:src="@drawable/user" />
     <EditText
         android:id="@+id/edt_usuario"
         android:layout_width="match_parent"
