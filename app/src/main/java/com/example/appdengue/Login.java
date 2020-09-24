@@ -36,7 +36,6 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         edt_usuario = findViewById(R.id.edt_usuario);
         edt_contrasenha = findViewById(R.id.edt_contrasenha);
-
         tv_registrar = (TextView) findViewById(R.id.tv_registrar);
         bt_login = (Button) findViewById(R.id.bt_ingresar);
 
@@ -61,8 +60,10 @@ public class Login extends AppCompatActivity {
                             JSONObject jsonResponse = new  JSONObject(response);
                             boolean success= jsonResponse.getBoolean("success");
                             if (success){
-                                Intent intent_inicio = new Intent(Login.this,Inicio.class);
-                                Login.this.startActivity(intent_inicio);
+                                String usuario=jsonResponse.getString("usuario");
+                                Intent intent = new Intent(Login.this, Inicio.class);
+                                intent.putExtra("usuario", user_usuario);
+                                Login.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                                 builder.setMessage("error login")
