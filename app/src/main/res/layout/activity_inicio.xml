@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Inicio">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido!"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:id="@+id/tv_bienvenida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/bt_denuncia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/btn_redondeado_negro"
+            android:text="Nueva denuncia"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_historial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_redondeado_negro"
+            android:text="Ver historial"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:gravity="center"/>
+<TextView
+    android:id="@+id/tv_consulta"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Consultas"
+    android:textColor="@color/black"
+    android:gravity="center"
+    android:textSize="20dp"
+    android:layout_marginTop="250dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
