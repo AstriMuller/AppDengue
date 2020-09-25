@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
                             if (success){
                                 String usuario=jsonResponse.getString("usuario");
                                 Intent intent = new Intent(Login.this, Inicio.class);
-                                intent.putExtra("usuario", user_usuario);
+                               intent.putExtra("usuario", user_usuario);
                                 Login.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
