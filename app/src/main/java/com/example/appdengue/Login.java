@@ -67,8 +67,8 @@ public class Login extends AppCompatActivity {
                                 Login.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                                builder.setMessage("error login")
-                                        .setNegativeButton("Retry",null)
+                                builder.setMessage("El nombre de usuario o contraseña que has ingresado no coinciden con nuestros registros.")
+                                        .setNegativeButton("Vuelve a intentarlo",null)
                                         .create().show();
                             }
                         } catch (JSONException e) {

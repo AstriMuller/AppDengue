@@ -16,13 +16,13 @@
 
         <TextView
             android:id="@+id/tv_denuncia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Formulario de Denuncia"
-            android:textColor="@color/black"
-            android:textSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="FORMULARIO DE DENUNCIA"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -78,7 +78,7 @@
 
                 <Spinner
                     android:id="@+id/sp_denuncia"
-                    android:layout_width="147dp"
+                    android:layout_width="match_parent"
                     android:layout_height="59dp"
                     android:layout_marginTop="30dp" />
 
@@ -162,14 +162,15 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="94dp"
-                    android:layout_height="31dp"
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
                     android:text="Cancelar"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/btn_redondeado_negrovd"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

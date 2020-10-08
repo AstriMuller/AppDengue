@@ -29,38 +29,5 @@ public class Denuncia extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.lista, android.R.layout.simple_list_item_1);
         sp_denuncia.setAdapter(adapter);
 
-        btnGPS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LocationManager locationManager = (LocationManager) Denuncia.this.getSystemService(Context.LOCATION_SERVICE);
-                LocationListener locationListener = new LocationListener() {
-                    public void onLocationChanged(Location location) {
-                        tvUbicacion.setText(""+location.getLatitude()+""+location.getLongitude());
-
-                    }
-                    public void onStatusChanged(String provider, int status, Bundle extras){}
-                    public void onProviderEnabled(String provider){}
-                    public void onProviderDisabled(String provider){}
-                };
-
-                int permissionCheck = ContextCompat.checkSelfPermission(Denuncia.this,
-                        Manifest.permission.ACCESS_FINE_LOCATION);
-                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-            }
-        });
-
-        int permissionCheck = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION);
-
-        if(permissionCheck== PackageManager.PERMISSION_DENIED){
-            if(ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)){
-            }else{
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        1);
-            }
-
-        }
     }
 }

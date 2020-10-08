@@ -46,21 +46,33 @@ public class Inicio extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_menu, menu);
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.activity_menu,menu);
         return true;
     }
-    public boolean onOptionItemSelected(MenuItem item){
-        int id = item.getItemId();
-        FragmentManager fragmentManager=getSupportFragmentManager();
-         if (id == R.id.ver_historia) {
-            fragmentManager.beginTransaction().replace(R.id.bienv, new FragmentHistorial()).commit();
-        } else if (id == R.id.politica) {
-            fragmentManager.beginTransaction().replace(R.id.bienv, new FragmentPolitica()).commit();
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.ver_historia:
+                Intent intent = new Intent(this,Historial.class);
+                startActivity(intent);
+                break;
+            case R.id.politica:
+                Intent intent2 = new Intent(this,Politica.class);
+                startActivity(intent2);
+                break;
+            case R.id.contacto:
+                Intent intent3 = new Intent(this,Contacto.class);
+                startActivity(intent3);
+                break;
+            case R.id.cerrar:
+                System.exit(0);
+
         }
-        return true;
-}
+        return super.onOptionsItemSelected(item);
+    }
+
 }
 
 
