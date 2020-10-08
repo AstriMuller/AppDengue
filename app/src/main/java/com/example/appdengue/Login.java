@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.appdengue.LoginRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -62,7 +63,7 @@ public class Login extends AppCompatActivity {
                             if (success){
                                 String usuario=jsonResponse.getString("usuario");
                                 Intent intent = new Intent(Login.this, Inicio.class);
-                               intent.putExtra("usuario", user_usuario);
+                                intent.putExtra("usuario", user_usuario);
                                 Login.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
