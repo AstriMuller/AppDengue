@@ -26,16 +26,16 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_marginTop="30dp"
             android:layout_width="378dp"
-            android:layout_height="300dp"
+            android:layout_height="404dp"
             android:layout_gravity="center"
+            android:layout_marginTop="30dp"
             android:background="#ffffff"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="98dp"
-                android:layout_height="276dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
@@ -63,7 +63,7 @@
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="100dp"
                     android:text="Imagen:"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -72,8 +72,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="141dp"
-                android:layout_height="275dp"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <Spinner
@@ -93,12 +93,18 @@
                     tools:layout_editor_absoluteX="162dp"
                     tools:layout_editor_absoluteY="453dp" />
 
+                <ImageView
+                    android:id="@+id/iv_camara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp" />
+
                 <Button
-                    android:id="@+id/btn_cargar"
+                    android:id="@+id/btn_camara"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:text="Capturar"
                     tools:layout_editor_absoluteX="162dp"
                     tools:layout_editor_absoluteY="453dp" />
@@ -106,8 +112,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="119dp"
-                android:layout_height="275dp"
+                android:layout_width="142dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <Button
@@ -120,15 +126,7 @@
                     tools:layout_editor_absoluteX="162dp"
                     tools:layout_editor_absoluteY="453dp" />
 
-                <Button
-                    android:id="@+id/btn_capturar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:text="Cargar"
-                    tools:layout_editor_absoluteX="162dp"
-                    tools:layout_editor_absoluteY="453dp" />
+
             </LinearLayout>
 
         </LinearLayout>
