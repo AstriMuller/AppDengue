@@ -1,14 +1,16 @@
 package com.example.appdengue;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -39,7 +41,6 @@ public class Login extends AppCompatActivity {
         edt_contrasenha = findViewById(R.id.edt_contrasenha);
         tv_registrar = (TextView) findViewById(R.id.tv_registrar);
         bt_login = (Button) findViewById(R.id.bt_ingresar);
-
         tv_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,3 +87,4 @@ public class Login extends AppCompatActivity {
 
 
 }
+

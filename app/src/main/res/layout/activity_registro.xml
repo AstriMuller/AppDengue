@@ -70,6 +70,31 @@
         android:layout_marginTop="15dp"
         android:textColorHint="#ccc"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Acepto los"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_termino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Terminos y condiciones"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_registrar"
         android:layout_width="match_parent"
@@ -78,7 +103,7 @@
         android:background="@drawable/btn_redondeado_negro"
         android:layout_gravity="center"
         android:textSize="18dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"
@@ -86,6 +111,5 @@
         android:elevation="5dp"
         android:textStyle="bold"
         />
-
 
 </LinearLayout>

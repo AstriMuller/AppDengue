@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.appdengue">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    
-    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Contacto"></activity>
+        <activity android:name=".Termino"></activity>
+        <activity android:name=".Mapa" />
+        <activity android:name=".Contacto" />
         <activity android:name=".Historial" />
         <activity android:name=".Politica" />
         <activity android:name=".Denuncia" />

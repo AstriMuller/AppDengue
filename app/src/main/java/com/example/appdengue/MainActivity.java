@@ -7,25 +7,24 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
-//Button btnGPS;
+    //Button btnGPS;
 //TextView tvUbicacion;
-Button acceder;
+    Button acceder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // tvUbicacion = (TextView)findViewById(R.id.tvUbicacion);
-      //  btnGPS = (Button)findViewById(R.id.button);
+        // tvUbicacion = (TextView)findViewById(R.id.tvUbicacion);
+        //  btnGPS = (Button)findViewById(R.id.button);
 
       /*  btnGPS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,14 +59,14 @@ Button acceder;
             }
 
         }*/
-            acceder= (Button) findViewById(R.id.button_acceder);
+        acceder= (Button) findViewById(R.id.button_acceder);
 
-            acceder.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intentAcceder = new Intent(MainActivity.this, Login.class);
-                    MainActivity.this.startActivity(intentAcceder);
-                }
-            });
+        acceder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentAcceder = new Intent(MainActivity.this, Login.class);
+                MainActivity.this.startActivity(intentAcceder);
+            }
+        });
     }
 }

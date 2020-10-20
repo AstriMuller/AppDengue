@@ -1,15 +1,14 @@
 package com.example.appdengue;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Politica extends AppCompatActivity {
+public class Termino extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_politica);
+        setContentView(R.layout.activity_termino);
     }
 }
