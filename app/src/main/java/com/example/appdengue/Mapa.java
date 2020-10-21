@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.ImageButton;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 public class Mapa extends AppCompatActivity {
 
         private MapView map = null;
-
+        ImageButton btn_Map;
         private final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
 
         @Override
@@ -35,7 +36,7 @@ public class Mapa extends AppCompatActivity {
 
             Context ctx = this.getApplicationContext();
             Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-
+            btn_Map = (ImageButton)findViewById(R.id.ic_map);
             map = findViewById(R.id.map_view);
             map.setTileSource(TileSourceFactory.MAPNIK);
             map.getController().setZoom(18.0);

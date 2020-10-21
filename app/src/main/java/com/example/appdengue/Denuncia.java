@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -30,8 +31,8 @@ import java.time.temporal.Temporal;
 
 public class Denuncia extends AppCompatActivity {
     Spinner sp_denuncia;
-    Button btn_gps;
-    Button btn_camara;
+    ImageButton btn_gps;
+    ImageButton btn_camara;
     ImageView iv_camara;
 
 
@@ -43,8 +44,8 @@ public class Denuncia extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_denuncia);
         sp_denuncia = (Spinner) findViewById(R.id.sp_denuncia);
-        btn_gps = (Button) findViewById(R.id.btn_ubicacion);
-        btn_camara = (Button) findViewById(R.id.btn_camara);
+        btn_gps = (ImageButton) findViewById(R.id.btn_ubicacion);
+        btn_camara = (ImageButton) findViewById(R.id.btn_camara);
         iv_camara = (ImageView) findViewById(R.id.iv_camara);
 
         btn_gps.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,9 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-
-        >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_denuncia"
@@ -22,7 +19,7 @@
             android:gravity="center"
             android:text="FORMULARIO DE DENUNCIA"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -34,7 +31,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="98dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -42,31 +39,34 @@
                     android:id="@+id/tv_sobre"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp"
                     android:layout_marginTop="45dp"
                     android:text="Motivo:"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
 
                 <TextView
                     android:id="@+id/tv_direccion"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="105dp"
                     android:text="Dirección:"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
 
                 <TextView
                     android:id="@+id/tv_imagen"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="105dp"
                     android:text="Imagen:"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
 
 
             </LinearLayout>
@@ -88,19 +88,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:hint="    Latitud:            ,Longitud:            "
+                    android:textSize="18sp"
                     android:gravity="center"
 
                     />
 
-                <Button
+                <ImageButton
                     android:id="@+id/btn_ubicacion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
-                    android:text="Ubicación"
-                    tools:layout_editor_absoluteX="162dp"
-                    tools:layout_editor_absoluteY="453dp" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_gps"
+
+                    />
 
                 <ImageView
                     android:id="@+id/iv_camara"
@@ -109,15 +112,16 @@
                     android:layout_marginTop="20dp"
                     android:gravity="center" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/btn_camara"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
-                    android:text="Capturar"
-                    tools:layout_editor_absoluteX="162dp"
-                    tools:layout_editor_absoluteY="453dp" />
+                    android:src="@drawable/ic_imagen"
+                    android:scaleType="fitXY"
+
+                     />
 
             </LinearLayout>
 
@@ -141,7 +145,7 @@
                     android:text="Guardar"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:background="@drawable/btn_redondeado_negro"/>
 
 
@@ -159,7 +163,7 @@
                     android:text="Cancelar"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:background="@drawable/btn_redondeado_negrovd"/>
             </LinearLayout>
         </LinearLayout>
