@@ -23,11 +23,13 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     EditText edt_usuario, edt_email, edt_contrasenha;
     Button bt_registro;
     TextView tv_temino;
+    TextView tv_politica;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
         tv_temino=(TextView) findViewById(R.id.tv_termino);
+        tv_politica=(TextView)findViewById(R.id.tv_politica);
         edt_usuario=(EditText) findViewById(R.id.edit_usuario);
         edt_email=(EditText) findViewById(R.id.edit_email);
         edt_contrasenha=(EditText) findViewById(R.id.edit_contrasenha);
@@ -37,6 +39,13 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onClick(View v) {
                 Intent intentTer = new Intent(Registro.this, Termino.class);
+                Registro.this.startActivity(intentTer);
+            }
+        });
+        tv_politica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentTer = new Intent(Registro.this, Politica.class);
                 Registro.this.startActivity(intentTer);
             }
         });

@@ -20,6 +20,7 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.CustomZoomButtonsController;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
+import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.compass.CompassOverlay;
 
 import java.util.ArrayList;
@@ -53,8 +54,8 @@ public class Mapa extends AppCompatActivity {
             compassOverlay.enableCompass();
             map.getOverlays().add(compassOverlay);
 
-            GeoPoint point = new GeoPoint(-27.33056, -55.86667);
-
+            GeoPoint point = new GeoPoint(-26.9961761797, -55.8821453);
+            
             Marker startMarker = new Marker(map);
             startMarker.setPosition(point);
             startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);

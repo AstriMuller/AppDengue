@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,6 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/p1"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,43 +38,17 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="1.    Información que se obtiene la aplicación y su utilización"
-           />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="          a)	Usuario proporcionó información"/>
-        <TextView
-            android:layout_width="398dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="@string/p1"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="          b)	Protección de datos personales" />
-
-        <TextView
-            android:layout_width="398dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:text="@string/p2"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp" />
+           />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/p3"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,64 +56,64 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="          c)	Información recopilada automáticamente" />
+            android:text="@string/p4"/>
         <TextView
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="@string/p3"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="13dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="¿La aplicación recopila información de ubicación precisa en tiempo real del dispositivo?" />
-        <TextView
-            android:layout_width="398dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="@string/p4"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="13dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="¿Los terceros pueden ver y/o tener acceso a la información obtenida por la aplicación?"/>
-
-        <TextView
-            android:layout_width="398dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:text="@string/p5"
             android:textColor="@color/black"
-            android:textSize="12dp" />
-        <TextView
-            android:layout_width="398dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="@string/p6"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
-            android:textSize="12dp" />
+            android:textStyle="bold"
+            android:text="@string/p6" />
+
         <TextView
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:text="@string/p7"
             android:textColor="@color/black"
+            android:layout_marginTop="10dp"
             android:textSize="12dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/p8" />
+        <TextView
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/p9"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:text="@string/p10"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:text="@string/p11"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -140,14 +121,82 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="Política de Retención de Datos, Gestión de la Información"/>
+            android:text="@string/p12" />
+        <TextView
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/p13"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/p14"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/p15"/>
 
         <TextView
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="@string/p8"
+            android:text="@string/p16"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/p17"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
+
+
+        <TextView
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/p18"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/p19"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/p20"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
+        <TextView
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/p21"
             android:textColor="@color/black"
             android:textSize="12dp" />
         <TextView
@@ -157,13 +206,14 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="Seguridad"/>
+            android:text="@string/p22"/>
+
         <TextView
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="@string/p9"
+            android:text="@string/p23"
             android:textColor="@color/black"
             android:textSize="12dp" />
         <TextView
@@ -173,13 +223,13 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="Su consentimiento"/>
+            android:text="@string/p24"/>
         <TextView
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="@string/p10"
+            android:text="@string/p25"
             android:textColor="@color/black"
             android:textSize="12dp" />
         <TextView
@@ -189,13 +239,13 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="Modificación"/>
+            android:text="@string/p26"/>
         <TextView
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="@string/p11"
+            android:text="@string/p27"
             android:textColor="@color/black"
             android:textSize="12dp" />
         <TextView
@@ -205,15 +255,102 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="Contáctenos"/>
+            android:text="@string/p28"/>
         <TextView
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="@string/p12"
+            android:text="@string/p29"
             android:textColor="@color/black"
             android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p30"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p31"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/p32"/>
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p33"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p34"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/p35"/>
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p36"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p37"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p38"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/p39"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+
     </LinearLayout>
     </ScrollView>
     </LinearLayout>

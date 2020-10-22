@@ -22,20 +22,87 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="p1">"La aplicación obtiene la información que usted proporciona cuando se descarga y se registra la aplicación. Para utilizar algunos de los servicios o acceder a determinados contenidos, deberá proporcionar previamente ciertos datos de carácter personal, que solo serán utilizados para el propósito que fueron recopilados. Cuando se registre con nosotros y utilice la aplicación, por lo general, deberá proporcionar (a) su nombre, dirección de correo electrónico, nombre de usuario, contraseña y otra información de registro, (b) La información que introduce en nuestro sistema al utilizar la aplicación, tales como fecha, dirección, tipo y una fotografía para las denuncias."</string>
-    <string name="p2">" Cómo principio general, estas aplicaciones no comparten ni revelan información obtenida, excepto cuando haya sido autorizada por usted, o en los siguientes casos: a) Cuando le sea requerido por una autoridad competente y previo el cumplimiento del trámite legal correspondiente y b) Cuando a juicio de esta aplicación sea necesario para hacer cumplir las condiciones de uso y demás términos de la aplicación, o para salvaguardar la integridad de los demás usuarios o de la aplicación. Deberá estar consciente de que, si usted voluntariamente revela información personal en línea en un área pública, esa información puede ser recogida y usada por otros. Nosotros no controlamos las acciones de nuestros visitantes y usuarios."</string>
-    <string name="p3">"Además, la aplicación puede recopilar cierta información automáticamente, incluyendo, pero no limitado a el tipo de dispositivo móvil que utilice, los dispositivos móviles de identificación única del dispositivo, la dirección IP de su dispositivo móvil, el sistema operativo móvil, el tipo de móvil navegadores de Internet que utiliza, y la información sobre el modo de usar la aplicación."</string>
-    <string name="p4">"Esta aplicación recoge información precisa sobre la ubicación de su dispositivo móvil con previa autorización."</string>
-    <string name="p5">"Sí. Vamos a compartir su información con terceros sólo en las formas que se describen en esta declaración de privacidad y que por lo tanto hayan sido autorizadas por los usuarios.
-Podemos revelar información que los usuarios proveen y se recaudan automáticamente por la aplicación:"</string>
-    <string name="p6">"•	Cuando creemos de buena fe que dicha divulgación es necesaria para proteger nuestros derechos, la protección de su seguridad o la seguridad de otros, investigar el fraude, o para responder a una solicitud del gobierno;</string>
-    <string name="p7">"•	Con nuestros proveedores de servicios de confianza que trabajan en nuestro nombre, no tienen un uso independiente de la información que divulgamos a ellos, y han acordado adherirse a las reglas establecidas en esta declaración de privacidad."</string>
-    <string name="p8">"Vamos a conservar datos de cada usuario proporcionada por el tiempo que se utiliza la aplicación y durante un plazo razonable. Vamos a conservar la información recopilada automáticamente hasta por 3 AÑOS y, posteriormente, se puede guardar definitivamente. Si desea que eliminemos los datos del usuario que han sido proporcionados a través de la aplicación, póngase en contacto con nosotros en (Correo destinado a la séptima) y le responderemos en un plazo razonable. Tenga en cuenta que algunos o todos los datos que proporcionaron los usuarios pueden ser requeridos para que la aplicación funcione correctamente."</string>
-    <string name="p9">"Estamos preocupados por salvaguardar la confidencialidad de su información. Proveemos salvaguardas físicas, electrónicas y de procedimiento para proteger la información que procesamos y mantener. Por ejemplo, limitamos el acceso a esta información a los empleados y contratistas autorizados que necesitan conocer dicha información para operar, desarrollar o mejorar nuestra aplicación. Tenga en cuenta que, aunque nos esforzamos por proporcionar seguridad razonable de información que procesamos y mantenemos, ningún sistema de seguridad puede prevenir todas las brechas de seguridad potenciales."</string>
-    <string name="p10">"Mediante el uso de la aplicación, usted acepta nuestro procesamiento de sus datos en los términos de esta Política de Privacidad de vez en cuando modificado por nosotros. "Proceso", significa el uso de cookies en un dispositivo de computadora y/o portátil o tocar la información de cualquier manera, no limitado a recoger, almacenar, borrar, utilizar la combinación y la divulgación de la información, todas las actividades que se llevarán a cabo en Paraguay. "</string>
-    <string name="p11">"La Séptima Región Sanitaria y se reserva el derecho de modificar en forma unilateral, sin mediar previo aviso, ni comunicación los usuarios, estos "Términos y Condiciones de Uso / Política de Privacidad", como así el diseño, la presentación o configuración de la aplicación, sin que ello genere derecho a reclamo o indemnización alguna en favor de los usuarios."</string>
-    <string name="p12">"Si usted tiene alguna pregunta respecto a la privacidad durante el uso de la aplicación, o si tiene preguntas sobre nuestras prácticas, por favor póngase en contacto con nosotros por correo electrónico a (insertar correo de la séptima)."</string>
+    <string name="p1">Esta política de privacidad rige el uso de la aplicación de software DEN para dispositivos móviles Android que fue creada por ___.</string>
+    <string name="p2">¿Qué tipo de datos recolectamos y para que los utilizamos?</string>
+    <string name="p3">Para el correcto funcionamiento de las aplicaciones que construimos o desarrollamos, estos son algunos de los datos que recolectamos:</string>
+    <string name="p4">Ubicación</string>
+    <string name="p5">Para el caso de las aplicaciones que sea necesario accedemos a los datos proporcionados por el GPS. Estos datos no los manejamos nosotros, son directamente manejado por Google Maps (nuestro proveedor de mapas).</string>
+    <string name="p6">Nombre</string>
+    <string name="p7">Sirve para que los administradores de la aplicación te puedan identificar de mejor manera.</string>
+    <string name="p8">Correo electrónico</string>
+    <string name="p9">Solicitado para registrarse como usuario y como método de recuperación de contraseña si la misma ha sido olvidada por el usuario.</string>
+    <string name="p10">Tus datos personales no son vendidos a terceros. Cuando realizamos estadísticas sobre el uso de la aplicación, estas no obtienen tus datos personales ni otra información adicional a los fines de la medición que permita identificarte individualmente (por ejemplo, mediremos los sectores que registran mas denuncias realizadas, pero no utilizaremos tu nombre).</string>
+    <string name="p11">Tus datos personales solo son guardados mientras desees mantener tu cuenta con nosotros. Si lo solicitas, serán eliminados junto con esta.</string>
+    <string name="p12">Cookies</string>
+    <string name="p13">Las cookies son archivos con una pequeña cantidad de datos que se usan comúnmente como identificadores únicos anónimos. Estos se envían a su navegador desde los sitios web que visita y se almacenan en la memoria interna de su dispositivo.</string>
+    <string name="p14">Este servicio no utiliza estas «cookies» explícitamente. Sin embargo, la aplicación puede usar código de terceros y bibliotecas que usan «cookies» para recopilar información y mejorar sus servicios. Tiene la opción de aceptar o rechazar estas cookies y saber cuándo se envía una cookie a su dispositivo. Si elige rechazar nuestras cookies, es posible que no pueda usar algunas partes de este Servicio.</string>
+    <string name="p15">Proveedores de servicio</string>
+    <string name="p16">Puedo emplear a empresas e individuos de terceros debido a las siguientes razones:</string>
+    <string name="p17">Para facilitar nuestro servicio;</string>
+    <string name="p18">Para proporcionar el Servicio en nuestro nombre;</string>
+    <string name="p19">Para realizar servicios relacionados con el Servicio; o</string>
+    <string name="p20">Para ayudarnos a analizar cómo se utiliza nuestro Servicio.</string>
+    <string name="p21">Deseo informar a los usuarios de este Servicio que estos terceros tienen acceso a su Información personal. La razón es realizar las tareas que se les asignaron en nuestro nombre. Sin embargo, están obligados a no divulgar ni utilizar la información para ningún otro propósito.</string>
+    <string name="p22">Seguridad</string>
+    <string name="p23">Valoro su confianza en proporcionarnos su información, por lo tanto, nos esforzamos por utilizar medios comercialmente aceptables para protegerla. Pero recuerde que ningún método de transmisión por Internet o método de almacenamiento electrónico es 100% seguro y confiable, y no puedo garantizar su seguridad absoluta.</string>
+    <string name="p24">Enlaces a otros sitios</string>
+    <string name="p25">Este servicio puede contener enlaces a otros sitios. Si hace clic en un enlace de un tercero, será dirigido a ese sitio. Tenga en cuenta que estos sitios externos no son operados por mí. Por lo tanto, le recomiendo que revise la Política de privacidad de estos sitios web. No tengo control ni asumo ninguna responsabilidad por el contenido, las políticas de privacidad o las prácticas de sitios o servicios de terceros.</string>
+    <string name="p26">Privacidad de los niños</string>
+    <string name="p27">Estos Servicios no se dirigen a ninguna persona menor de 13 años. No recopilo a sabiendas información de identificación personal de niños menores de 13 años. En el caso de que descubra que un niño menor de 13 años me ha proporcionado información personal, la borro inmediatamente de nuestros servidores. Si usted es padre o tutor y sabe que su hijo nos ha proporcionado información personal, comuníquese conmigo para que pueda realizar las acciones necesarias.</string>
+    <string name="p28">¿Qué hacemos con los datos que recolectamos?</string>
+    <string name="p29">Los datos recolectados son de dos tipos:</string>
+    <string name="p30">Datos recolectados por nosotros.</string>
+    <string name="p31">Datos recolectados por terceros.</string>
+    <string name="p32">Datos recolectados por nosotros</string>
+    <string name="p33">Estos datos se recolectan para obtener un feedback de que es lo que quieren nuestros usuarios y así poder mejorar brindando las correctas mejoras en cada actualización.</string>
+    <string name="p34">Los datos son manipulados a nivel de código, luego procesados en grandes cantidades y de usó para prevención, pero en ningún momento accedemos a datos de un usuario en particular, pues están encriptados y solo el usuario dueño de la información puede acceder a ellos.</string>
+    <string name="p35">Datos recolectados por terceros</string>
+    <string name="p36">En los datos recolectados por terceros están:</string>
+    <string name="p37">Google Play</string>
+    <string name="p38">Google Analytics</string>
+    <string name="p39">Puedes dar click a cada uno de los elementos de la lista para acceder a sus políticas de datos.</string>
+
+
     <string name="menu_home">Home</string>
+    <string name="terminos">Los presentes Términos y Condiciones rigen la utilización del software o aplicación “DEN”..</string>
+    <string name="t1">Al marcar la casilla de confirmación declaras haber leído y aceptar los presentes Términos y Condiciones, así como el tratamiento de datos personales que realiza DEN y que se encuentra contenido en nuestra Política de Privacidad.</string>
+<string name="t2">El software DEN es propiedad intelectual propietaria y exclusiva de____. La modificación, traducción, adaptación, edición, o cualquier acto de ingeniería inversa, desensamblado o descompilación de su código se encuentra prohibido sin la autorización expresa de ______.
+</string>
+    <string name="t3"> Condiciones de uso</string>
+
+<string name="t4">DEN es un servicio gratuito para individuos. La violación a estos Términos y Condiciones o a nuestra Política de Privacidad será causal suficiente para poner término permanente a la utilización de nuestros servicios. El uso no autorizado de la propiedad intelectual o de la marca de _______constituirá también una infracción suficiente para poner término a la utilización de nuestros servicios.
+Al aceptar el presente acuerdo reconoces que DEN constituye una aplicación móvil donde su contenido es aportado tanto por los usuarios que la componen. El contenido de los reportes en la aplicación son exclusiva responsabilidad de quienes los emiten.
+Cualquier modificación de estos Términos y Condiciones, o de la Política de Privacidad que rige el tratamiento de datos de _______, regirá desde su publicación en nuestro sitio web. Cuando dichas modificaciones impacten de manera significativa en el tratamiento de los datos personales que realiza ______ o el funcionamiento de la aplicación esta será previamente notificada al correo que utilizaste para registrarte con nosotros o por medio de la interfaz de la aplicación.
+</string>
+    <string name="t5">Descripción del servicio y uso autorizado</string>
+
+<string name="t6">DEN es una aplicación móvil de colaboración ciudadana donde los usuarios y demás entidades que participan en esta comparten reportes e información de manera pública. Al utilizar este servicio facultas a _____t para usar, transmitir y guardar la información que publicas o divulgas por intermedio de los reportes, sin perjuicio de las limitaciones establecidas en la Política de Privacidad.
+DEN se compromete a prestar al usuario - bajo los Términos y Condiciones del presente acuerdo - el acceso al servicio de envío de reportes dispuestos por ______, o por terceros usuarios del sistema y/o terceros proveedores de servicios y contenidos. ______no está obligado a realizar acción alguna respecto de los reportes realizados por usuarios de DEN.
+Para el servicio de reportes DEN, los usuarios deben crear una cuenta, mediante la cual podrán tener acceso y hacer uso de los servicios prestados por DEN, o por terceros usuarios del sistema y/o terceros proveedores de servicios y contenidos.
+El usuario reconoce y acepta que todo o parte de los Servicios objeto del presente Acuerdo podrán ser prestados indistintamente por DEN o alguno de sus usuarios que presten servicios, los que estarán sujetos a las mismas obligaciones impuestas por estos Términos y Condiciones y la Política de Privacidad de _____.
+
+</string>
+    <string name="t7"> Prohibiciones</string>
+
+    <string name="t8">DEN prohíbe el uso de los servicios con fines ilícitos o inmorales. Se prohíbe especialmente:</string>
+
+<string name="t9">La publicación o difusión que contenga o divulgue cualquier información de identificación personal o información privada de cualquier persona sin su consentimiento. Cualquier publicación que incluya datos personales de menores de edad requiere el consentimiento expreso de sus padres, curador legal o equivalente.
+</string>
+<string name="t10">La utilización de la plataforma para fines difamatorios, de calumnia o que constituyan actitudes amenazantes o de acoso.
+</string>
+<string name="t11">La publicación o propagación de contenido que incite a la violencia, a la discriminación o la alteración del orden.
+</string>
+<string name="t12">Acceder, monitorear, copiar y almacenar por cualquier medio los datos compartidos en DEN sin autorización expresa de _____.
+</string>
+<string name="t13">Realizar cualquier acción que imponga o pueda imponer una carga desproporcionada a la infraestructura tecnológica o humana de _____.
+</string>
+<string name="t14">Utilizar la aplicación con fines perjudiciales o que afecten la usabilidad de los demás usuarios.
+</string>
+    <string name="t15">Limitación de seguridad</string>
+<string name="t16">Los Servicios y la aplicación pueden contener enlaces a sitios web de terceros o recursos. Proporcionamos estos vínculos solamente para tu conveniencia y DEN no es responsable de los contenidos, productos o servicios en, o disponibles en dichos sitios o recursos o enlaces que aparecen en dichos sitios. Usted reconoce la responsabilidad exclusiva y asume todos los riesgos que surjan de su uso de cualquier sitio web o recursos de terceros.</string>
+    <string name="t17">Vigencia de los términos y condiciones</string>
+<string name="t18">Los presentes Términos y Condiciones entraron en vigencia ……………... Te informaremos cada vez que estos Términos y Condiciones sufran una modificación esencial que produzca cambios relevantes en la prestación del servicio o el tratamiento de tus datos personales.
+</string>
     <string name="bt_center_map_description"> </string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>

@@ -12,7 +12,7 @@
         android:icon="@drawable/ic_info"
        android:orderInCategory="9"
         />
-    <item android:title="Contactenos"
+    <item android:title="Sugerencias"
         android:id="@+id/contacto"
         android:icon="@drawable/ic_info"
         android:orderInCategory="10"

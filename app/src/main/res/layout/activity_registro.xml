@@ -72,12 +72,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:gravity="left"
         android:orientation="horizontal">
         <CheckBox
+            android:layout_marginTop="5dp"
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -87,14 +88,45 @@
         <TextView
             android:id="@+id/tv_termino"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
             android:text=" Terminos y condiciones"
             android:textColor="@color/colorAccent"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:text="   y"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
 
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="          la  "
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:id="@+id/tv_politica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Politica de Privacidad"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    </LinearLayout>
     <Button
         android:id="@+id/btn_registrar"
         android:layout_width="match_parent"
