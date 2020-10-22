@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         // tvUbicacion = (TextView)findViewById(R.id.tvUbicacion);
         //  btnGPS = (Button)findViewById(R.id.button);
 
-      /*  btnGPS.setOnClickListener(new View.OnClickListener() {
+        /*
+        btnGPS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 LocationManager locationManager = (LocationManager) MainActivity.this.getSystemService(Context.LOCATION_SERVICE);
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
                         1);
             }
 
-        }*/
+        }
+        */
         acceder= (Button) findViewById(R.id.button_acceder);
 
         acceder.setOnClickListener(new View.OnClickListener() {

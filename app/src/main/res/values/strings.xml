@@ -36,6 +36,7 @@ Podemos revelar información que los usuarios proveen y se recaudan automáticam
     <string name="p11">"La Séptima Región Sanitaria y se reserva el derecho de modificar en forma unilateral, sin mediar previo aviso, ni comunicación los usuarios, estos "Términos y Condiciones de Uso / Política de Privacidad", como así el diseño, la presentación o configuración de la aplicación, sin que ello genere derecho a reclamo o indemnización alguna en favor de los usuarios."</string>
     <string name="p12">"Si usted tiene alguna pregunta respecto a la privacidad durante el uso de la aplicación, o si tiene preguntas sobre nuestras prácticas, por favor póngase en contacto con nosotros por correo electrónico a (insertar correo de la séptima)."</string>
     <string name="menu_home">Home</string>
+    <string name="bt_center_map_description"> </string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="spinner">Sobre</string>

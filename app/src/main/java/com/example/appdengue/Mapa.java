@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.widget.ImageButton;
 
 
@@ -61,6 +62,7 @@ public class Mapa extends AppCompatActivity {
 
             map.getController().setCenter(point);
         }
+
 
         @Override
         public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
