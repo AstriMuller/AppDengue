@@ -64,9 +64,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     Toast.makeText(this,"Campo contraseña vacío",Toast.LENGTH_LONG).show();
                 }else {
                     ////
-                    final String user_usuario=edt_usuario.getText().toString();
-                    final String user_email=edt_email.getText().toString();
-                    final String user_contrasenha=edt_contrasenha.getText().toString();
+                    final String user_usuario=edt_usuario.getText().toString().trim();
+                    final String user_email=edt_email.getText().toString().trim();
+                    final String user_contrasenha=edt_contrasenha.getText().toString().trim();
                     Response.Listener<String> respoListener =new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

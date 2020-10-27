@@ -2,6 +2,7 @@ package com.example.appdengue;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,22 +25,37 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.time.temporal.Temporal;
+import java.util.Map;
 
-public class Denuncia extends AppCompatActivity {
+public class Denuncia extends AppCompatActivity implements View.OnClickListener{
     Spinner sp_denuncia;
     ImageButton btn_gps;
     ImageButton btn_camara;
     ImageView iv_camara;
     ImageButton btn_gp;
-    TextView tv_ubicacion;
+    TextView tv_lng;
     Button btn_cancel;
+    TextView tv_lat;
+    Button btn_guardar;
+    ProgressDialog cargando;
+    Bitmap bitmap =null;
 
 
     private final int cod_foto = 100;
@@ -52,17 +69,22 @@ public class Denuncia extends AppCompatActivity {
         btn_gps = (ImageButton) findViewById(R.id.btn_ubicacion);
         btn_camara = (ImageButton) findViewById(R.id.btn_camara);
         iv_camara = (ImageView) findViewById(R.id.iv_camara);
-        tv_ubicacion = (TextView)findViewById(R.id.tv_ubicacion);
+        tv_lng = (TextView)findViewById(R.id.tv_lng);
         btn_gp = (ImageButton) findViewById(R.id.btn_gp);
         btn_cancel= (Button) findViewById(R.id.btn_cancelar);
+        tv_lat = (TextView) findViewById(R.id.tv_lat);
+        btn_guardar= (Button) findViewById(R.id.btn_guardar);
+        cargando=new ProgressDialog(this);
+        btn_guardar.setOnClickListener(this);
 
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(Denuncia.this, Inicio.class);
-                Denuncia.this.startActivity(intent1);
-            }
-        });
+                Intent intent = new Intent(Denuncia.this, Inicio.class);
+                Denuncia.this.startActivity(intent);
+        }
+    });
+
 
         btn_gps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,29 +93,32 @@ public class Denuncia extends AppCompatActivity {
                 Denuncia.this.startActivity(inten);
             }
         });
+
         btn_gp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LocationManager locationManager = (LocationManager) Denuncia.this.getSystemService(Context.LOCATION_SERVICE);
-                LocationListener locationListener = new LocationListener() {
-                    public void onLocationChanged(Location location) {
-                        tv_ubicacion.setText("" + location.getLatitude() + "" + location.getLongitude());
+            LocationManager locationManager = (LocationManager) Denuncia.this.getSystemService(Context.LOCATION_SERVICE);
+            LocationListener locationListener = new LocationListener() {
+                public void onLocationChanged(Location location) {
+                    tv_lng.setText("" + location.getLongitude());
+                    tv_lat.setText("" + location.getLatitude());
 
-                    }
 
-                    public void onStatusChanged(String provider, int status, Bundle extras) {
-                    }
+                }
 
-                    public void onProviderEnabled(String provider) {
-                    }
+                public void onStatusChanged(String provider, int status, Bundle extras) {
+                }
 
-                    public void onProviderDisabled(String provider) {
-                    }
-                };
-                int permissionCheck = ContextCompat.checkSelfPermission(Denuncia.this,
-                        Manifest.permission.ACCESS_FINE_LOCATION);
+                public void onProviderEnabled(String provider) {
+                }
+
+                public void onProviderDisabled(String provider) {
+                }
+            };
+            int permissionCheck = ContextCompat.checkSelfPermission(Denuncia.this,
+                    Manifest.permission.ACCESS_FINE_LOCATION);
                 locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-            }
+        }
         });
         int permissionCheck = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION);
@@ -107,6 +132,8 @@ public class Denuncia extends AppCompatActivity {
                         1);
             }
         }
+
+
 
 
         btn_camara.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +168,61 @@ public class Denuncia extends AppCompatActivity {
 
 
     }
+
+    public void onClick(View view) {
+        /// validar
+        if (sp_denuncia.getSelectedItem().toString().isEmpty()) {
+            Toast.makeText(this, "Campo tipo vacío", Toast.LENGTH_LONG).show();
+        } else {
+            if (tv_lat.getText().toString().isEmpty()) {
+                Toast.makeText(this, "Campo latitud vacío", Toast.LENGTH_LONG).show();
+            } else {
+                        if (tv_lng.getText().toString().isEmpty()) {
+                            Toast.makeText(this, "Campo longitud vacío", Toast.LENGTH_LONG).show();
+                        } else {
+                            if (iv_camara.getDrawable() == null) {
+                                Toast.makeText(this, "Campo imagen vacío", Toast.LENGTH_LONG).show();
+                            } else {
+
+                        ////
+
+                        final String den_tipo = sp_denuncia.getSelectedItem().toString().trim();
+                        final String den_imagen = iv_camara.getDrawable().toString();
+                        final String den_lat = tv_lat.getText().toString().trim();
+                        final String den_lng = tv_lng.getText().toString().trim();
+                        Response.Listener<String> respoListener = new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    JSONObject jsonReponse = new JSONObject(response);
+                                    boolean success = jsonReponse.getBoolean("success");
+                                    if (success) {
+
+                                        Intent intent = new Intent(Denuncia.this, Inicio.class);
+                                        Denuncia.this.startActivity(intent);
+
+                                    } else {
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(Denuncia.this);
+                                        builder.setMessage("error registro")
+                                                .setNegativeButton("Retry", null)
+                                                .create().show();
+
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+
+                        DenunciaRequest denunciaRequest = new DenunciaRequest(den_tipo, den_imagen, den_lat, den_lng, respoListener);
+                        RequestQueue queue = Volley.newRequestQueue(Denuncia.this);
+                        queue.add(denunciaRequest);
+                    }
+                }
+            }
+        }
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

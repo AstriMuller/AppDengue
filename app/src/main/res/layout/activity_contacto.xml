@@ -23,29 +23,34 @@
             >
 
     <Button
+        android:id="@+id/btn_ideas"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Ideas y sugerencias"
         android:textSize="15dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/btn_redondeado_blanco"
+        android:background="@drawable/btn_cuadrado_blanco"
        />
 
         <Button
+            android:id="@+id/btn_comentarios"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Comentarios"
             android:textSize="15dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/btn_redondeado_blanco"
+            android:background="@drawable/btn_cuadrado_blanco"
+
             />
         <Button
+            android:id="@+id/btn_nofunciona"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Algo no esta funcionando"
             android:textSize="15dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/btn_redondeado_blanco"/>
+            android:background="@drawable/btn_cuadrado_blanco"
+            />
 
         </LinearLayout>
 

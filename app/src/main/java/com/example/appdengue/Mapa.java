@@ -4,6 +4,7 @@ package com.example.appdengue;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -18,6 +19,7 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.CustomZoomButtonsController;
+import org.osmdroid.views.MapController;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
 import org.osmdroid.views.overlay.OverlayItem;
@@ -27,7 +29,7 @@ import java.util.ArrayList;
 
 public class Mapa extends AppCompatActivity {
 
-        private MapView map = null;
+        MapView map;
         ImageButton btn_Map;
         private final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
 
@@ -35,6 +37,7 @@ public class Mapa extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_mapa);
+
 
             Context ctx = this.getApplicationContext();
             Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));

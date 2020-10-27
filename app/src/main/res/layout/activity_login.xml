@@ -51,6 +51,15 @@
         android:paddingBottom="10dp"
         android:textColorHint="#ccc"
         />
+
+        <RadioButton
+            android:id="@+id/rb_nsesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:text="No cerrar sesión" />
+
         <TextView
             android:id="@+id/et_olvidaste"
             android:layout_width="match_parent"

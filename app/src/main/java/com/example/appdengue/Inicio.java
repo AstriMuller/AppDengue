@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,12 +22,15 @@ public class Inicio extends AppCompatActivity {
 
     TextView tv_usuario;
     Button btn_denuncia;
+    EditText edt_usuario, edt_contrasenha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenido);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        edt_usuario = findViewById(R.id.edt_usuario);
+        edt_contrasenha = findViewById(R.id.edt_contrasenha);
 
         tv_usuario = (TextView) findViewById(R.id.tv_bienvenida);
 
@@ -67,7 +71,10 @@ public class Inicio extends AppCompatActivity {
                 startActivity(intent3);
                 break;
             case R.id.cerrar:
-                System.exit(0);
+                Login.cambiar_rbestado(Inicio.this,false);
+                Intent intent4 = new Intent(Inicio.this, Login.class);
+                Inicio.this.startActivity(intent4);
+                finish();
 
         }
         return super.onOptionsItemSelected(item);
