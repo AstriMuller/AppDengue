@@ -193,26 +193,27 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
                         Response.Listener<String> respoListener = new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                try {
-                                    JSONObject jsonReponse = new JSONObject(response);
-                                    boolean success = jsonReponse.getBoolean("success");
-                                    if (success) {
+                                    try {
+                                        JSONObject jsonReponse = new JSONObject(response);
+                                        boolean success = jsonReponse.getBoolean("success");
+                                        if (success) {
 
-                                        Intent intent = new Intent(Denuncia.this, Inicio.class);
-                                        Denuncia.this.startActivity(intent);
+                                            Intent intent = new Intent(Denuncia.this, Inicio.class);
+                                            Denuncia.this.startActivity(intent);
+                                            finish();
 
-                                    } else {
-                                        AlertDialog.Builder builder = new AlertDialog.Builder(Denuncia.this);
-                                        builder.setMessage("error registro")
-                                                .setNegativeButton("Retry", null)
-                                                .create().show();
+                                        } else {
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(Denuncia.this);
+                                            builder.setMessage("error registro")
+                                                    .setNegativeButton("Retry", null)
+                                                    .create().show();
 
+                                        }
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
                                     }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
                                 }
-                            }
-                        };
+                            };
 
                         DenunciaRequest denunciaRequest = new DenunciaRequest(den_tipo, den_imagen, den_lat, den_lng, respoListener);
                         RequestQueue queue = Volley.newRequestQueue(Denuncia.this);

@@ -35,13 +35,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="25dp"
-        android:background="@drawable/btn_redondeado_blanco"
+        android:background="@drawable/btn_redondeado_negro"
         android:layout_marginLeft="25dp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:elevation="5dp"
         android:layout_marginBottom="30dp"
         android:textSize="16dp"
-        android:text="Iniciar Sesión"
+        android:text="Acceder"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="162dp"
         tools:layout_editor_absoluteY="453dp" />
 
