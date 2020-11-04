@@ -65,6 +65,7 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_denuncia);
+
         sp_denuncia = (Spinner) findViewById(R.id.sp_denuncia);
         btn_gps = (ImageButton) findViewById(R.id.btn_ubicacion);
         btn_camara = (ImageButton) findViewById(R.id.btn_camara);
@@ -196,11 +197,11 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
                                     try {
                                         JSONObject jsonReponse = new JSONObject(response);
                                         boolean success = jsonReponse.getBoolean("success");
+
                                         if (success) {
 
                                             Intent intent = new Intent(Denuncia.this, Inicio.class);
                                             Denuncia.this.startActivity(intent);
-                                            finish();
 
                                         } else {
                                             AlertDialog.Builder builder = new AlertDialog.Builder(Denuncia.this);

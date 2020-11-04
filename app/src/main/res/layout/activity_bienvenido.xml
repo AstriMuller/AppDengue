@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:hint="Usuario"
+        android:hint="Astri"
         android:textSize="22sp"
         android:textStyle="bold" />
     />

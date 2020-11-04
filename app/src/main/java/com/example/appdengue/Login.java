@@ -48,7 +48,6 @@ public class Login extends AppCompatActivity {
         if (obtener_rbestado()){
             Intent intent = new Intent(Login.this, Inicio.class);
             Login.this.startActivity(intent);
-            finish();
         }
         rb_sesion = (RadioButton)findViewById(R.id.rb_nsesion);
         edt_usuario = findViewById(R.id.edt_usuario);
@@ -90,12 +89,10 @@ public class Login extends AppCompatActivity {
                             boolean success= jsonResponse.getBoolean("success");
                             guardar_rbestado();
                             if (success){
-
                                 String usuario=jsonResponse.getString("usuario");
                                 Intent intent = new Intent(Login.this, Inicio.class);
                                 intent.putExtra("usuario", user_usuario);
                                 Login.this.startActivity(intent);
-                                finish();
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                                 builder.setMessage("El nombre de usuario o contraseña que has ingresado no coinciden con nuestros registros.")

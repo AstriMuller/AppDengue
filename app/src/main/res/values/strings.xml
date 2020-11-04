@@ -27,7 +27,7 @@
     <string name="p3">Para el correcto funcionamiento de las aplicaciones que construimos o desarrollamos, estos son algunos de los datos que recolectamos:</string>
     <string name="p4">Ubicación</string>
     <string name="p5">Para el caso de las aplicaciones que sea necesario accedemos a los datos proporcionados por el GPS. Estos datos no los manejamos nosotros, son directamente manejado por Google Maps (nuestro proveedor de mapas).</string>
-    <string name="p6">Nombre</string>
+    <string name="p6">Usuario</string>
     <string name="p7">Sirve para que los administradores de la aplicación te puedan identificar de mejor manera.</string>
     <string name="p8">Correo electrónico</string>
     <string name="p9">Solicitado para registrarse como usuario y como método de recuperación de contraseña si la misma ha sido olvidada por el usuario.</string>
