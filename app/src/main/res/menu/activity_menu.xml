@@ -2,8 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <item android:title="Ver Historial"
-        android:id="@+id/ver_historia"
+
+    <item android:title="Historial"
+        android:id="@+id/mostrar_historial"
         android:icon="@drawable/ic_history"
         android:orderInCategory="5"
         />
@@ -11,6 +12,11 @@
         android:id="@+id/politica"
         android:icon="@drawable/ic_info"
        android:orderInCategory="9"
+        />
+    <item android:title="Terminos y condiciones"
+        android:id="@+id/termino"
+        android:icon="@drawable/ic_info"
+        android:orderInCategory="9"
         />
     <item android:title="Sugerencias"
         android:id="@+id/contacto"

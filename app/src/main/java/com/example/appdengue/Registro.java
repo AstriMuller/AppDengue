@@ -56,24 +56,20 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         /// validar
         if (edt_usuario.getText().toString().isEmpty()){
             Toast.makeText(this,"Campo usuario vacío",Toast.LENGTH_LONG).show();
-
         }else {
             if (edt_email.getText().toString().isEmpty()){
                 Toast.makeText(this,"Campo email vacío",Toast.LENGTH_LONG).show();
             }else {
                 if (edt_contrasenha.getText().toString().isEmpty()){
                     Toast.makeText(this,"Campo contraseña vacío",Toast.LENGTH_LONG).show();
-                    //
-
-                    //
                 }else {
                     ////
                     final String user_usuario=edt_usuario.getText().toString().trim();
                     final String user_email=edt_email.getText().toString().trim();
                     final String user_contrasenha=edt_contrasenha.getText().toString().trim();
                     Response.Listener<String> respoListener =new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
+                        @Override
+                        public void onResponse(String response) {
                             try {
                                 JSONObject jsonReponse = new JSONObject(response);
                                 boolean success= jsonReponse.getBoolean("success");

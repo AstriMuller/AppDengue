@@ -3,6 +3,7 @@ package com.example.appdengue;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -33,7 +34,8 @@ import java.util.ArrayList;
 public class Mapa extends AppCompatActivity {
         TextView tv_latitud,tv_longitud;
         MapView map;
-        ImageButton btn_Map;
+        ImageButton btn_center;
+        ImageButton btn_salir;
         private final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
 
         @Override
@@ -44,16 +46,17 @@ public class Mapa extends AppCompatActivity {
 
             Context ctx = this.getApplicationContext();
             Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-            btn_Map = (ImageButton)findViewById(R.id.ic_map);
+            btn_salir=(ImageButton) findViewById(R.id.ic_salir);
             map = findViewById(R.id.map_view);
             tv_latitud=(TextView)findViewById(R.id.tv_latitud);
             tv_longitud=(TextView)findViewById(R.id.tv_longitud);
+            btn_center=(ImageButton)findViewById(R.id.ic_center);
 
             map.setTileSource(TileSourceFactory.MAPNIK);
-
             map.getController().setZoom(7.0);
             GeoPoint point = new GeoPoint(-23.442503, -58.443832);
             map.getController().setCenter(point);
+
             requestPermissionsIfNecessary(new String[]{
                     Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.ACCESS_WIFI_STATE, Manifest.permission.INTERNET
             });
@@ -69,7 +72,7 @@ public class Mapa extends AppCompatActivity {
 
             ///
 
-            btn_Map.setOnClickListener(new View.OnClickListener() {
+            btn_center.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     LocationManager locationManager = (LocationManager) Mapa.this.getSystemService(Context.LOCATION_SERVICE);
@@ -77,21 +80,18 @@ public class Mapa extends AppCompatActivity {
                         public void onLocationChanged(Location location) {
                             tv_longitud.setText("" + location.getLongitude());
                             tv_latitud.setText("" + location.getLatitude());
-                            //
-
                             map.getController().setZoom(20.0);
-                            GeoPoint point2 = new GeoPoint(-26.9961761797, -55.8821453);
-
+                            GeoPoint point3 = new GeoPoint(location.getLatitude(), location.getLongitude());
+                            map.getController().setCenter(point3);
                             Marker startMarker = new Marker(map);
-                            startMarker.setPosition(point2);
+                            startMarker.setPosition(point3);
                             startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);
                             map.getOverlays().add(startMarker);
 
-                            //
+
                             startMarker.setIcon(getResources().getDrawable(R.drawable.ic_marker));
                             startMarker.setTitle("Tu ubicación actual");
-                            map.getController().setCenter(point2);
-
+                            map.getController().setCenter(point3);
 
                         }
 
@@ -123,6 +123,70 @@ public class Mapa extends AppCompatActivity {
             }
 
 
+        btn_salir.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(Mapa.this, Denuncia.class);
+        Mapa.this.startActivity(intent);
+         }
+        });
+           /*
+            btn_Map.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    LocationManager locationManager = (LocationManager) Mapa.this.getSystemService(Context.LOCATION_SERVICE);
+                    LocationListener locationListener = new LocationListener() {
+                        public void onLocationChanged(Location location) {
+                            tv_longitud.setText("" + location.getLongitude());
+                            tv_latitud.setText("" + location.getLatitude());
+
+                            map.getController().setZoom(20.0);
+                            GeoPoint point2 = new GeoPoint(-26.9961761797, -55.8821453);
+                            map.getController().setCenter(point2);
+
+                            Marker startMarker = new Marker(map);
+                            startMarker.setPosition(point2);
+                            startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);
+                            map.getOverlays().add(startMarker);
+
+
+                            startMarker.setIcon(getResources().getDrawable(R.drawable.ic_marker));
+                            startMarker.setTitle("Tu ubicación actual");
+                            map.getController().setCenter(point2);
+
+
+                        }
+
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
+                        }
+
+                        public void onProviderEnabled(String provider) {
+                        }
+
+                        public void onProviderDisabled(String provider) {
+                        }
+                    };
+                    int permissionCheck = ContextCompat.checkSelfPermission(Mapa.this,
+                            Manifest.permission.ACCESS_FINE_LOCATION);
+                    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+                }
+            });
+            *//*
+            int permissionCheck = ContextCompat.checkSelfPermission(this,
+              Manifest.permission.ACCESS_FINE_LOCATION);
+
+            if(permissionCheck== PackageManager.PERMISSION_DENIED) {
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.ACCESS_FINE_LOCATION)) {
+                } else {
+                    ActivityCompat.requestPermissions(this,
+                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                            1);
+                }
+
+            }
+
+*/
 
 
         }

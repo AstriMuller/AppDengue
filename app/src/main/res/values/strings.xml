@@ -66,17 +66,17 @@
     <string name="menu_home">Home</string>
     <string name="terminos">Los presentes Términos y Condiciones rigen la utilización del software o aplicación “DEN”..</string>
     <string name="t1">Al marcar la casilla de confirmación declaras haber leído y aceptar los presentes Términos y Condiciones, así como el tratamiento de datos personales que realiza DEN y que se encuentra contenido en nuestra Política de Privacidad.</string>
-<string name="t2">El software DEN es propiedad intelectual propietaria y exclusiva de____. La modificación, traducción, adaptación, edición, o cualquier acto de ingeniería inversa, desensamblado o descompilación de su código se encuentra prohibido sin la autorización expresa de ______.
+    <string name="t2">El software DEN es propiedad intelectual propietaria y exclusiva de____. La modificación, traducción, adaptación, edición, o cualquier acto de ingeniería inversa, desensamblado o descompilación de su código se encuentra prohibido sin la autorización expresa de ______.
 </string>
     <string name="t3"> Condiciones de uso</string>
 
-<string name="t4">DEN es un servicio gratuito para individuos. La violación a estos Términos y Condiciones o a nuestra Política de Privacidad será causal suficiente para poner término permanente a la utilización de nuestros servicios. El uso no autorizado de la propiedad intelectual o de la marca de _______constituirá también una infracción suficiente para poner término a la utilización de nuestros servicios.
+    <string name="t4">DEN es un servicio gratuito para individuos. La violación a estos Términos y Condiciones o a nuestra Política de Privacidad será causal suficiente para poner término permanente a la utilización de nuestros servicios. El uso no autorizado de la propiedad intelectual o de la marca de _______constituirá también una infracción suficiente para poner término a la utilización de nuestros servicios.
 Al aceptar el presente acuerdo reconoces que DEN constituye una aplicación móvil donde su contenido es aportado tanto por los usuarios que la componen. El contenido de los reportes en la aplicación son exclusiva responsabilidad de quienes los emiten.
 Cualquier modificación de estos Términos y Condiciones, o de la Política de Privacidad que rige el tratamiento de datos de _______, regirá desde su publicación en nuestro sitio web. Cuando dichas modificaciones impacten de manera significativa en el tratamiento de los datos personales que realiza ______ o el funcionamiento de la aplicación esta será previamente notificada al correo que utilizaste para registrarte con nosotros o por medio de la interfaz de la aplicación.
 </string>
     <string name="t5">Descripción del servicio y uso autorizado</string>
 
-<string name="t6">DEN es una aplicación móvil de colaboración ciudadana donde los usuarios y demás entidades que participan en esta comparten reportes e información de manera pública. Al utilizar este servicio facultas a _____t para usar, transmitir y guardar la información que publicas o divulgas por intermedio de los reportes, sin perjuicio de las limitaciones establecidas en la Política de Privacidad.
+    <string name="t6">DEN es una aplicación móvil de colaboración ciudadana donde los usuarios y demás entidades que participan en esta comparten reportes e información de manera pública. Al utilizar este servicio facultas a _____t para usar, transmitir y guardar la información que publicas o divulgas por intermedio de los reportes, sin perjuicio de las limitaciones establecidas en la Política de Privacidad.
 DEN se compromete a prestar al usuario - bajo los Términos y Condiciones del presente acuerdo - el acceso al servicio de envío de reportes dispuestos por ______, o por terceros usuarios del sistema y/o terceros proveedores de servicios y contenidos. ______no está obligado a realizar acción alguna respecto de los reportes realizados por usuarios de DEN.
 Para el servicio de reportes DEN, los usuarios deben crear una cuenta, mediante la cual podrán tener acceso y hacer uso de los servicios prestados por DEN, o por terceros usuarios del sistema y/o terceros proveedores de servicios y contenidos.
 El usuario reconoce y acepta que todo o parte de los Servicios objeto del presente Acuerdo podrán ser prestados indistintamente por DEN o alguno de sus usuarios que presten servicios, los que estarán sujetos a las mismas obligaciones impuestas por estos Términos y Condiciones y la Política de Privacidad de _____.
@@ -86,22 +86,22 @@ El usuario reconoce y acepta que todo o parte de los Servicios objeto del presen
 
     <string name="t8">DEN prohíbe el uso de los servicios con fines ilícitos o inmorales. Se prohíbe especialmente:</string>
 
-<string name="t9">La publicación o difusión que contenga o divulgue cualquier información de identificación personal o información privada de cualquier persona sin su consentimiento. Cualquier publicación que incluya datos personales de menores de edad requiere el consentimiento expreso de sus padres, curador legal o equivalente.
+    <string name="t9">La publicación o difusión que contenga o divulgue cualquier información de identificación personal o información privada de cualquier persona sin su consentimiento. Cualquier publicación que incluya datos personales de menores de edad requiere el consentimiento expreso de sus padres, curador legal o equivalente.
 </string>
-<string name="t10">La utilización de la plataforma para fines difamatorios, de calumnia o que constituyan actitudes amenazantes o de acoso.
+    <string name="t10">La utilización de la plataforma para fines difamatorios, de calumnia o que constituyan actitudes amenazantes o de acoso.
 </string>
-<string name="t11">La publicación o propagación de contenido que incite a la violencia, a la discriminación o la alteración del orden.
+    <string name="t11">La publicación o propagación de contenido que incite a la violencia, a la discriminación o la alteración del orden.
 </string>
-<string name="t12">Acceder, monitorear, copiar y almacenar por cualquier medio los datos compartidos en DEN sin autorización expresa de _____.
+    <string name="t12">Acceder, monitorear, copiar y almacenar por cualquier medio los datos compartidos en DEN sin autorización expresa de _____.
 </string>
-<string name="t13">Realizar cualquier acción que imponga o pueda imponer una carga desproporcionada a la infraestructura tecnológica o humana de _____.
+    <string name="t13">Realizar cualquier acción que imponga o pueda imponer una carga desproporcionada a la infraestructura tecnológica o humana de _____.
 </string>
-<string name="t14">Utilizar la aplicación con fines perjudiciales o que afecten la usabilidad de los demás usuarios.
+    <string name="t14">Utilizar la aplicación con fines perjudiciales o que afecten la usabilidad de los demás usuarios.
 </string>
     <string name="t15">Limitación de seguridad</string>
-<string name="t16">Los Servicios y la aplicación pueden contener enlaces a sitios web de terceros o recursos. Proporcionamos estos vínculos solamente para tu conveniencia y DEN no es responsable de los contenidos, productos o servicios en, o disponibles en dichos sitios o recursos o enlaces que aparecen en dichos sitios. Usted reconoce la responsabilidad exclusiva y asume todos los riesgos que surjan de su uso de cualquier sitio web o recursos de terceros.</string>
+    <string name="t16">Los Servicios y la aplicación pueden contener enlaces a sitios web de terceros o recursos. Proporcionamos estos vínculos solamente para tu conveniencia y DEN no es responsable de los contenidos, productos o servicios en, o disponibles en dichos sitios o recursos o enlaces que aparecen en dichos sitios. Usted reconoce la responsabilidad exclusiva y asume todos los riesgos que surjan de su uso de cualquier sitio web o recursos de terceros.</string>
     <string name="t17">Vigencia de los términos y condiciones</string>
-<string name="t18">Los presentes Términos y Condiciones entraron en vigencia ……………... Te informaremos cada vez que estos Términos y Condiciones sufran una modificación esencial que produzca cambios relevantes en la prestación del servicio o el tratamiento de tus datos personales.
+    <string name="t18">Los presentes Términos y Condiciones entraron en vigencia ……………... Te informaremos cada vez que estos Términos y Condiciones sufran una modificación esencial que produzca cambios relevantes en la prestación del servicio o el tratamiento de tus datos personales.
 </string>
     <string name="bt_center_map_description"> </string>
     <string name="menu_gallery">Gallery</string>

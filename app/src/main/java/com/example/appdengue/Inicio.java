@@ -58,13 +58,18 @@ public class Inicio extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
-            case R.id.ver_historia:
-                Intent intent = new Intent(this,Historial.class);
-                startActivity(intent);
+            case R.id.mostrar_historial:
+                Intent intent6 = new Intent(this,MostrarHistorial.class);
+                startActivity(intent6);
                 break;
             case R.id.politica:
                 Intent intent2 = new Intent(this,Politica.class);
                 startActivity(intent2);
+                break;
+
+            case R.id.termino:
+                Intent intent5 = new Intent(this,Termino.class);
+                startActivity(intent5);
                 break;
             case R.id.contacto:
                 Intent intent3 = new Intent(this,Contacto.class);
