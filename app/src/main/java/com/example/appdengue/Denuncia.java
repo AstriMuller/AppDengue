@@ -48,6 +48,7 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
     Spinner sp_denuncia;
     ImageButton btn_gps;
     ImageButton btn_camara;
+    ImageButton btn_mapa;
     ImageView iv_camara;
     ImageButton btn_gp;
     TextView tv_lng;
@@ -67,14 +68,13 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_denuncia);
 
         sp_denuncia = (Spinner) findViewById(R.id.sp_denuncia);
-        btn_gps = (ImageButton) findViewById(R.id.btn_ubicacion);
         btn_camara = (ImageButton) findViewById(R.id.btn_camara);
         iv_camara = (ImageView) findViewById(R.id.iv_camara);
         tv_lng = (TextView)findViewById(R.id.tv_lng);
-        btn_gp = (ImageButton) findViewById(R.id.btn_gp);
         btn_cancel= (Button) findViewById(R.id.btn_cancelar);
         tv_lat = (TextView) findViewById(R.id.tv_lat);
         btn_guardar= (Button) findViewById(R.id.btn_guardar);
+        btn_mapa=(ImageButton)findViewById(R.id.btn_mapa);
         cargando=new ProgressDialog(this);
         btn_guardar.setOnClickListener(this);
 
@@ -86,7 +86,7 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
         }
     });
 
-
+/*
         btn_gps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,7 +133,50 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
                         1);
             }
         }
+        //*/
+        btn_mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final CharSequence[] options={"Ubicación actual","Buscar","Cancelar"};
+                final AlertDialog.Builder builder = new AlertDialog.Builder(Denuncia.this);
+                builder.setTitle("Elige una opción");
+                builder.setItems(options, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int selection) {
+                        if (options[selection]=="Ubicación actual"){
+                                LocationManager locationManager = (LocationManager) Denuncia.this.getSystemService(Context.LOCATION_SERVICE);
+                                LocationListener locationListener = new LocationListener() {
+                                    public void onLocationChanged(Location location) {
+                                        tv_lng.setText("" + location.getLongitude());
+                                        tv_lat.setText("" + location.getLatitude());
 
+
+                                    }
+
+                                    public void onStatusChanged(String provider, int status, Bundle extras) {
+                                    }
+
+                                    public void onProviderEnabled(String provider) {
+                                    }
+
+                                    public void onProviderDisabled(String provider) {
+                                    }
+                                };
+                                int permissionCheck = ContextCompat.checkSelfPermission(Denuncia.this,
+                                        Manifest.permission.ACCESS_FINE_LOCATION);
+                                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+
+                        }else if(options[selection]=="Buscar"){
+                            Intent inte = new Intent(Denuncia.this, Mapa.class);
+                            Denuncia.this.startActivity(inte);
+                        }else if(options[selection]=="Cancelar"){
+                            dialog.dismiss();
+                        }
+                    }
+                });
+                builder.show();
+            }
+        });
 
 
 

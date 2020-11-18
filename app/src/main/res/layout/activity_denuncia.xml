@@ -106,12 +106,14 @@
                     />
 
                 <ImageButton
-                    android:id="@+id/btn_gp"
+                    android:id="@+id/btn_mapa"
                     android:layout_width="100dp"
                     android:layout_height="90dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/osm_ic_center_map" />
+                    android:src="@drawable/ic_gps"
+
+                    />
 
 
                 <ImageView
@@ -130,24 +132,6 @@
                     android:layout_marginTop="20dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_imagen"
-
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-
-                <ImageButton
-                    android:id="@+id/btn_ubicacion"
-                    android:layout_width="100dp"
-                    android:layout_height="90dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="160dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_gps"
 
                     />
 

@@ -11,12 +11,12 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
     <ListView
+        android:background="@drawable/borde"
         android:id="@+id/list_mostrar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:dividerHeight="5px"
-        android:divider="@color/black"
+        android:layout_marginTop="55dp"
+        android:dividerHeight="2dp"
         android:foregroundGravity="center"
         />
 
