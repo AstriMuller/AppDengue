@@ -228,10 +228,10 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
             Toast.makeText(this, "Campo tipo vacío", Toast.LENGTH_LONG).show();
         } else {
             if (tv_lat.getText().toString().isEmpty()) {
-                Toast.makeText(this, "Campo latitud vacío", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Campo ubicación vacío", Toast.LENGTH_LONG).show();
             } else {
                         if (tv_lng.getText().toString().isEmpty()) {
-                            Toast.makeText(this, "Campo longitud vacío", Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "Campo ubicación vacío", Toast.LENGTH_LONG).show();
                         } else {
                             if (iv_camara.getDrawable() == null) {
                                 Toast.makeText(this, "Campo imagen vacío", Toast.LENGTH_LONG).show();

@@ -1,6 +1,7 @@
 package com.example.appdengue;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     Button bt_registro;
     TextView tv_temino;
     TextView tv_politica;
+    ProgressDialog cargando;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         edt_email=(EditText) findViewById(R.id.edit_email);
         edt_contrasenha=(EditText) findViewById(R.id.edit_contrasenha);
         bt_registro= (Button) findViewById(R.id.btn_registrar);
+        cargando=new ProgressDialog(this);
         bt_registro.setOnClickListener(this);
         tv_temino.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +56,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Cargando");
         /// validar
         if (edt_usuario.getText().toString().isEmpty()){
             Toast.makeText(this,"Campo usuario vacío",Toast.LENGTH_LONG).show();
@@ -67,6 +72,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     final String user_usuario=edt_usuario.getText().toString().trim();
                     final String user_email=edt_email.getText().toString().trim();
                     final String user_contrasenha=edt_contrasenha.getText().toString().trim();
+                    progressDialog.show();
+                    Toast.makeText(this, "Registrado", Toast.LENGTH_LONG).show();
                     Response.Listener<String> respoListener =new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
