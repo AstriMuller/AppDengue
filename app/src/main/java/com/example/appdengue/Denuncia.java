@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -61,12 +62,18 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
 
     private final int cod_foto = 100;
     private final int selec_foto = 200;
-
+    static final String STRING_PREFERENCES="com.example.appdengue";
+    static final String PREFERENCES_ESTADO_BUTTON_SESION = "estado.boton.sesion";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_denuncia);
-
+        /*
+        if (obtener_rbestado()){
+            Intent intent = new Intent(Denuncia.this, Inicio.class);
+            Denuncia.this.startActivity(intent);
+        }
+        */
         sp_denuncia = (Spinner) findViewById(R.id.sp_denuncia);
         btn_camara = (ImageButton) findViewById(R.id.btn_camara);
         iv_camara = (ImageView) findViewById(R.id.iv_camara);
@@ -214,6 +221,8 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
     }
 
     public void onClick(View view) {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Cargando");
         /// validar
         if (sp_denuncia.getSelectedItem().toString().isEmpty()) {
             Toast.makeText(this, "Campo tipo vacío", Toast.LENGTH_LONG).show();
@@ -229,23 +238,24 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
                             } else {
 
                         ////
-
                         final String den_tipo = sp_denuncia.getSelectedItem().toString().trim();
                         final String den_imagen = iv_camara.getDrawable().toString();
                         final String den_lat = tv_lat.getText().toString().trim();
                         final String den_lng = tv_lng.getText().toString().trim();
+                                progressDialog.show();
+                                Intent intent = new Intent(Denuncia.this, Inicio.class);
+                                Denuncia.this.startActivity(intent);
+                                Toast.makeText(this, "Guardado", Toast.LENGTH_LONG).show();
                         Response.Listener<String> respoListener = new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
                                     try {
                                         JSONObject jsonReponse = new JSONObject(response);
                                         boolean success = jsonReponse.getBoolean("success");
-
+                                        //progressDialog.dismiss();
                                         if (success) {
-
-                                            Intent intent = new Intent(Denuncia.this, Inicio.class);
-                                            Denuncia.this.startActivity(intent);
-
+                                                 Intent intent = new Intent(Denuncia.this, Inicio.class);
+                                                 Denuncia.this.startActivity(intent);
                                         } else {
                                             AlertDialog.Builder builder = new AlertDialog.Builder(Denuncia.this);
                                             builder.setMessage("error registro")
@@ -286,5 +296,11 @@ public class Denuncia extends AppCompatActivity implements View.OnClickListener{
                 break;
         }
     }
+    /*
+    public boolean obtener_rbestado(){
+        SharedPreferences preferences = getSharedPreferences(STRING_PREFERENCES,MODE_PRIVATE);
+        return preferences.getBoolean(PREFERENCES_ESTADO_BUTTON_SESION,false);
+    }
+    */
 
 }

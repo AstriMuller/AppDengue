@@ -37,25 +37,26 @@ public class Login extends AppCompatActivity {
     Button bt_login;
     RadioButton rb_sesion;
     boolean is_action_rb;
-    static final String STRING_PREFERENCES="com.example.appdengue";
-    static final String PREFERENCES_ESTADO_BUTTON_SESION = "estado.boton.sesion";
+    //static final String STRING_PREFERENCES="com.example.appdengue";
+   // static final String PREFERENCES_ESTADO_BUTTON_SESION = "estado.boton.sesion";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+/*
         if (obtener_rbestado()){
             Intent intent = new Intent(Login.this, Inicio.class);
             Login.this.startActivity(intent);
         }
+        */
         rb_sesion = (RadioButton)findViewById(R.id.rb_nsesion);
         edt_usuario = findViewById(R.id.edt_usuario);
         edt_contrasenha = findViewById(R.id.edt_contrasenha);
         tv_registrar = (TextView) findViewById(R.id.tv_registrar);
         bt_login = (Button) findViewById(R.id.bt_ingresar);
-        is_action_rb=rb_sesion.isChecked();
-
+        //is_action_rb=rb_sesion.isChecked();
+/*
         rb_sesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +66,7 @@ public class Login extends AppCompatActivity {
                 is_action_rb=rb_sesion.isChecked();
             }
         });
+        */
         tv_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +89,7 @@ public class Login extends AppCompatActivity {
                         try{
                             JSONObject jsonResponse = new  JSONObject(response);
                             boolean success= jsonResponse.getBoolean("success");
-                            guardar_rbestado();
+                            //guardar_rbestado();
                             if (success){
                                 String usuario=jsonResponse.getString("usuario");
                                 Intent intent = new Intent(Login.this, Inicio.class);
@@ -111,6 +113,7 @@ public class Login extends AppCompatActivity {
         });
 
     }
+    /*
     public static void cambiar_rbestado(Context c, boolean b){
         SharedPreferences preferences = c.getSharedPreferences(STRING_PREFERENCES,MODE_PRIVATE);
         preferences.edit().putBoolean(PREFERENCES_ESTADO_BUTTON_SESION,b).apply();
@@ -123,6 +126,8 @@ public class Login extends AppCompatActivity {
     SharedPreferences preferences = getSharedPreferences(STRING_PREFERENCES,MODE_PRIVATE);
      return preferences.getBoolean(PREFERENCES_ESTADO_BUTTON_SESION,false);
     }
+    /*/
+
 
 }
 

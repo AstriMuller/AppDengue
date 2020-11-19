@@ -2,6 +2,7 @@ package com.example.appdengue;
 
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.view.Gravity;
@@ -27,6 +28,13 @@ public class Inicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenido);
+        /*
+        if (obtener_rbestado()){
+            Intent intent = new Intent(Inicio.this, Denuncia.class);
+            Inicio.this.startActivity(intent);
+        }
+        /*/
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         edt_usuario = findViewById(R.id.edt_usuario);
@@ -76,7 +84,7 @@ public class Inicio extends AppCompatActivity {
                 startActivity(intent3);
                 break;
             case R.id.cerrar:
-                Login.cambiar_rbestado(Inicio.this,false);
+                //Login.cambiar_rbestado(Inicio.this,false);
                 Intent intent4 = new Intent(Inicio.this, Login.class);
                 Inicio.this.startActivity(intent4);
                 finish();
@@ -84,6 +92,12 @@ public class Inicio extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    /*
+    public boolean obtener_rbestado(){
+        SharedPreferences preferences = getSharedPreferences(STRING_PREFERENCES,MODE_PRIVATE);
+        return preferences.getBoolean(PREFERENCES_ESTADO_BUTTON_SESION,false);
+    }
+    /*/
 
 }
 

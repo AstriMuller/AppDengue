@@ -39,6 +39,7 @@ public class Contacto extends AppCompatActivity implements View.OnClickListener 
             Toast.makeText(this, "Campo sugerencias vacío", Toast.LENGTH_LONG).show();
         } else {
             final String den_sugerencia = edt_sugerencia.getText().toString().trim();
+            Toast.makeText(this, "Guardado", Toast.LENGTH_LONG).show();
             Response.Listener<String> respoListener = new Response.Listener<String>() {
                 public void onResponse(String response) {
                     try {
