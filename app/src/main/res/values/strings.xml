@@ -114,4 +114,9 @@ El usuario reconoce y acepta que todo o parte de los Servicios objeto del presen
         <item>Otro</item>
     </string-array>
     <string name="title_activity_mapa">Map</string>
+    <string name="title_activity_tabbed">Tabbed</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

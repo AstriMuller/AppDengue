@@ -3,51 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Login">
-<androidx.viewpager.widget.ViewPager
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pl"
+        android:scaleType="centerCrop" />
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/view_pager"
+    android:orientation="vertical"
+    android:background="#a5000000"
+    android:gravity="center"
     >
-</androidx.viewpager.widget.ViewPager>
 
-    <RelativeLayout
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/iconodan"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/dn"
+        android:layout_marginBottom="50dp"
+        />
+    <Button
+        android:id="@+id/btn_acceder"
         android:layout_width="match_parent"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_alignParentBottom="true"
-        >
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Atras"
-            android:background="@android:color/background_light"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:id="@+id/btn_atras"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dots_layout"
-            android:orientation="horizontal"
-            android:layout_centerInParent="true"
-            android:layout_alignParentTop="true"
-            ></LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Siguiente"
-            android:layout_alignParentRight="true"
-            android:background="@android:color/background_light"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:id="@+id/btn_sgte"
-/>
-
-    </RelativeLayout>
-
+        android:background="@drawable/btn_redondeado_negro"
+        android:text="Acceder"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+</LinearLayout>
 </RelativeLayout>
+

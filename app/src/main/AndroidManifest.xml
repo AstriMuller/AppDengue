@@ -19,7 +19,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MostrarHistorial"/>
+        <activity
+            android:name=".Tabbed"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".MostrarHistorial" />
         <activity android:name=".Termino" />
         <activity android:name=".Mapa" />
         <activity android:name=".Contacto" />
