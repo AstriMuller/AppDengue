@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.appdengue.Fragment1;
 import com.example.appdengue.Fragment2;
+import com.example.appdengue.Fragment3;
 import com.example.appdengue.R;
 
 /**
@@ -32,6 +33,7 @@ public class PlaceholderFragment extends Fragment {
             break;
             case 2: fragment=new Fragment2();
             break;
+
         }
         return fragment;
     }

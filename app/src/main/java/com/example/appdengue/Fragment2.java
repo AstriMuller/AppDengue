@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,7 +31,7 @@ public class Fragment2 extends Fragment {
     private String mParam1;
     private String mParam2;
     View vista;
-    Button btn_acc;
+    ImageButton btn_ste;
 
 
     public Fragment2() {
@@ -74,9 +75,9 @@ public class Fragment2 extends Fragment {
 
         vista=inflater.inflate(R.layout.fragment_2, container, false);
 
-        btn_acc=(Button)vista.findViewById(R.id.btn_acced);
+        btn_ste=(ImageButton) vista.findViewById(R.id.btn_s);
 
-        btn_acc.setOnClickListener(new View.OnClickListener() {
+        btn_ste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent inter = new Intent(Fragment2.this.getActivity(), Login.class);
