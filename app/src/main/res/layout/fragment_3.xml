@@ -17,7 +17,7 @@
         android:orientation="vertical">
     <!-- TODO: Update blank fragment layout -->
     <Button
-        android:id="@+id/btn_acced"
+        android:id="@+id/btn_ac"
         android:layout_width="match_parent"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"

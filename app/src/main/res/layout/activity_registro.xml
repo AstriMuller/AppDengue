@@ -8,67 +8,74 @@
     tools:context=".Registro">
 
     <TextView
-        android:layout_marginTop="35dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Registro de usuario"
-        android:textSize="28sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:layout_gravity="center"
+        android:text="REGISTRO DE USUARIO"
 
-    <EditText
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/tf_reg">
+
+    <com.google.android.material.textfield.TextInputEditText
+
         android:layout_marginTop="70dp"
         android:id="@+id/edit_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Usuario"
         android:inputType="text"
-        android:layout_marginBottom="15dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/input"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:textColorHint="#ccc"
         />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/tf_rege">
 
-    <EditText
+
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:inputType="text"
-        android:layout_marginBottom="15dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/input"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:inputType="textEmailAddress"
         android:textColorHint="#ccc"
         android:layout_marginTop="15dp"
         />
-
-    <EditText
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:passwordToggleEnabled="true"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/tf_regpass">
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_contrasenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        android:layout_marginBottom="15dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/input"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="15dp"
         android:textColorHint="#ccc"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,7 +86,7 @@
         android:orientation="horizontal">
         <CheckBox
             android:layout_marginTop="5dp"
-            android:id="@+id/checkBox"
+            android:id="@+id/cb_ac"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Acepto los"
@@ -92,15 +99,15 @@
             android:layout_marginTop="5dp"
             android:text=" Terminos y condiciones"
             android:textColor="@color/colorAccent"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="2dp"
-            android:text="   y"
+            android:text="  y"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="15sp"
             />
 
     </LinearLayout>
@@ -114,9 +121,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="          la  "
+        android:text="                            la  "
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         />
     <TextView
         android:id="@+id/tv_politica"
@@ -124,7 +131,7 @@
         android:layout_height="wrap_content"
         android:text="Politica de Privacidad"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold" />
     </LinearLayout>
     <Button
@@ -135,7 +142,7 @@
         android:background="@drawable/btn_redondeado_negro"
         android:layout_gravity="center"
         android:textSize="18dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"

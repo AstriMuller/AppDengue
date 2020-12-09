@@ -62,9 +62,9 @@ public class Fragment3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        vista=inflater.inflate(R.layout.fragment_2, container, false);
+        vista=inflater.inflate(R.layout.fragment_3, container, false);
 
-        btn_acc=(Button)vista.findViewById(R.id.btn_acced);
+        btn_acc=(Button)vista.findViewById(R.id.btn_ac);
 
         btn_acc.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -23,6 +23,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.appdengue.LoginRequest;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +34,8 @@ import java.util.Map;
 
 
 public class Login extends AppCompatActivity {
-    EditText edt_usuario, edt_contrasenha;
+    TextInputLayout tf_log,tf_pas;
+    TextInputEditText edt_usuario, edt_contrasenha;
     TextView tv_registrar;
     Button bt_login;
     RadioButton rb_sesion;
@@ -50,6 +53,8 @@ public class Login extends AppCompatActivity {
             Login.this.startActivity(intent);
         }
         */
+        tf_log=(TextInputLayout)findViewById(R.id.tf_login);
+        tf_pas=(TextInputLayout)findViewById(R.id.tf_logpas);
         rb_sesion = (RadioButton)findViewById(R.id.rb_nsesion);
         edt_usuario = findViewById(R.id.edt_usuario);
         edt_contrasenha = findViewById(R.id.edt_contrasenha);
