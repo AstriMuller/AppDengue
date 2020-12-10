@@ -36,7 +36,7 @@ import java.util.Map;
 public class Login extends AppCompatActivity {
     TextInputLayout tf_log,tf_pas;
     TextInputEditText edt_usuario, edt_contrasenha;
-    TextView tv_registrar;
+    TextView tv_registrar, tv_olv;
     Button bt_login;
     RadioButton rb_sesion;
     boolean is_action_rb;
@@ -53,6 +53,7 @@ public class Login extends AppCompatActivity {
             Login.this.startActivity(intent);
         }
         */
+        tv_olv = (TextView) findViewById(R.id.tv_olvidaste);
         tf_log=(TextInputLayout)findViewById(R.id.tf_login);
         tf_pas=(TextInputLayout)findViewById(R.id.tf_logpas);
         rb_sesion = (RadioButton)findViewById(R.id.rb_nsesion);
@@ -72,6 +73,13 @@ public class Login extends AppCompatActivity {
             }
         });
         */
+        tv_olv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentReg = new Intent(Login.this, Recuperar.class);
+                Login.this.startActivity(intentReg);
+            }
+        });
         tv_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
