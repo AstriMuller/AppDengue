@@ -5,11 +5,9 @@
         tools:context="com.example.appdengue.Historial">
         <item
             android:id="@+id/action_search"
-            android:orderInCategory="100"
-            android:title="Search"
+            android:title="Buscar"
+            app:actionViewClass="android.widget.SearchView"
             android:icon="@drawable/ic_search"
-            app:showAsAction="collapseActionView|always"
-            android:theme="@android:style/Theme.Holo.Light"/>
-
+            app:showAsAction="always" />
 
     </menu>

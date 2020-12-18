@@ -23,6 +23,7 @@ public class Inicio extends AppCompatActivity {
 
     TextView tv_usuario;
     Button btn_denuncia;
+    Button btn_estado;
     EditText edt_usuario, edt_contrasenha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,15 @@ public class Inicio extends AppCompatActivity {
 
         tv_usuario.setText(usuario);
         btn_denuncia = (Button) findViewById(R.id.btn_nuevad);
+        btn_estado=(Button)findViewById(R.id.btn_estado);
 
+        btn_estado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentEstado= new Intent(Inicio.this,Estado.class);
+                Inicio.this.startActivity(intentEstado);
+            }
+        });
         btn_denuncia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

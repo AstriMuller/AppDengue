@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
     TextView tv_registrar, tv_olv;
     Button bt_login;
     RadioButton rb_sesion;
-    boolean is_action_rb;
+    //boolean is_action_rb;
     //static final String STRING_PREFERENCES="com.example.appdengue";
    // static final String PREFERENCES_ESTADO_BUTTON_SESION = "estado.boton.sesion";
 

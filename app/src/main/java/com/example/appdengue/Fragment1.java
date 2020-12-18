@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,8 +72,12 @@ public class Fragment1 extends Fragment {
         btn_sgte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent inter = new Intent(Fragment1.this.getActivity(), Login.class);
-                Fragment1.this.startActivity(inter);
+                Fragment fragmenthijo = new Fragment2();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment1,fragmenthijo);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
 
             }
         });

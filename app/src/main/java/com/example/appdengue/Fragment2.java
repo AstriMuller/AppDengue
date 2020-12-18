@@ -31,7 +31,7 @@ public class Fragment2 extends Fragment {
     private String mParam1;
     private String mParam2;
     View vista;
-    ImageButton btn_ste;
+    Button btn_ste;
 
 
     public Fragment2() {
@@ -75,7 +75,7 @@ public class Fragment2 extends Fragment {
 
         vista=inflater.inflate(R.layout.fragment_2, container, false);
 
-        btn_ste=(ImageButton) vista.findViewById(R.id.btn_s);
+        btn_ste=(Button) vista.findViewById(R.id.btn_s);
 
         btn_ste.setOnClickListener(new View.OnClickListener() {
             @Override

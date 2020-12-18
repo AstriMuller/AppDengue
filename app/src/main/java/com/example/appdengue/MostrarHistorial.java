@@ -3,6 +3,7 @@ package com.example.appdengue;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.ClipData;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ListView;
@@ -24,6 +25,7 @@ import java.util.List;
 public class MostrarHistorial extends AppCompatActivity {
     ListView listView;
     List<Mostrar> mostrarList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Recuperar"></activity>
+        <activity android:name=".Estado"></activity>
+        <activity android:name=".Recuperar" />
         <activity
             android:name=".Tabbed"
             android:label="@string/title_activity_tabbed"
